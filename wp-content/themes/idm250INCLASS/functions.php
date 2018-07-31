@@ -14,4 +14,12 @@ function register_menus(){
 }
 
 add_action('init', 'register_menus');
+
+function load_theme_assets(){
+    /* How to import CSS and JS files and custom fonts*/
+    wp_enqueue_style('style', get_template_directory_uri() . 'dist/css/styles.css');
+    wp_enqueue_style('script', get_template_directory_uri() . 'dist/js/script.js');
+    /* wp_enqueue_style('font-uniqueID', 'link to google font');*/
+}
+add_action('wp_enqueue_scripts', 'load_theme_assets');
 ?>
