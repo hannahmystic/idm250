@@ -1,0 +1,372 @@
+/*
+Theme Name: Hannah's Portfolio Theme
+Theme URI: This is where the theme is located. I could put my github here. If I was going to sell the theme, this is where you link the website to buy or download it
+Author: Hannah Mystic
+Author URI: hannahmystic.com
+Description: Theme for IDM250 Portfolio site. 
+Version: 0.0.1
+*/
+
+*{ box-sizing: border-box; }
+img{ max-width: 100%; }
+body{ background-color: white;}
+
+/*________________________________
+ |                                |
+ |           TEXT STYLING         |    
+ |________________________________|*/
+
+h1{
+    font-family: 'Fredoka One', cursive;
+    font-size: 4.5rem;
+    color: #C45194;
+}
+h2{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3rem;
+    color: #44BFAB;
+    font-weight: bold;
+}
+h3{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3rem;
+    color: #C45194;
+    font-weight: bold;
+}
+h4{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.25rem;
+    color: #C45194;
+    font-weight: bold;
+}
+h5{
+    font-family: 'Muli', sans-serif;
+    font-size: 1.875rem;
+    color: #1C1132;
+    font-weight: bold;
+}
+h6{
+    font-family: 'Muli', sans-serif;
+    font-size: 1.5rem;
+    color: #1c1132;
+    font-weight: bold;
+}
+p{
+    font-family: 'Muli', sans-serif;
+    font-size: 1.25rem;
+    color: #1C1132;
+    line-height: 1.563rem;
+    max-width: 41.25rem;
+}
+a{
+    font-family: 'Muli', sans-serif;
+    font-size: 1.25rem;
+    color: #3FB3A0;
+    font-weight: bold;
+}
+
+
+/*________________________________
+ |                                |
+ |           LIST STYLING         |    
+ |________________________________|*/
+ul{
+    list-style: none;
+    list-style-position: outside;
+    list-style-type: "&#x2749";
+}
+ul li::before {
+/*    content: "&#x2749";*/
+    color: #C45194;
+    display: inline-block; width: 1em;
+    margin-left: -1em;
+}
+
+ol{ list-style: none; counter-reset: li; }
+ol li::before {
+    content: counter(li);
+    color: 3FB3A0;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    text-align: right;
+    direction: rtl;
+}
+ol li {counter-increment: li; }
+/*List styling learned from: https://www.w3.org/Style/Examples/007/color-bullets.en.html*/
+
+
+
+
+/*________________________________
+ |                                |
+ |  PHOTO, TABLE, BUTTON, QUOTE   |    
+ |________________________________|*/
+img{
+    display: inline-block;
+    border-radius: 4px;
+}
+.caption p{
+    font-size: 1rem;
+    text-align: right;
+    margin: 0;
+}
+figcaption{
+    font-size: 1rem;
+    text-align: right;
+    margin: 0;
+    width: 100%;
+}
+
+
+
+table {
+    font-family: 'Muli', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #979797;
+    padding: 14px;
+    color: #1C1132;
+}
+td{
+    font-size: 1.25rem;
+    text-align: left;
+}
+tr:nth-child(even) {background-color: #EEF5D8;}
+th {
+    text-align: center;
+    background-color: #C5DD7D;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+/* Table learned from https://www.w3schools.com/css/css_table.asp*/
+
+button{
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-color: #F5ABCA;
+    box-shadow: 1px 2px 2px 1px black;
+    padding: 8px;
+    
+    color: white;
+    text-shadow: 1px 0 1px 0 black;
+    margin: 0;
+    text-align: center;
+}
+/*
+button h3{
+    color: white;
+    text-shadow: 1px 0 1px 0 black;
+    margin: 0;
+    text-align: center;
+}
+*/
+
+blockquote{
+    margin: 0 auto;
+    width: 488px;
+    background: url(media/quote.png) no-repeat; 
+}
+
+
+
+/*________________________________
+ |                                |
+ |            NAVIGATION          |    
+ |________________________________|*/
+nav{ margin: 0; width: 100%;}
+.navContents{
+    background-color: #85CFC3;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    border: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+#myNameInitials{ display: none; }
+#myName{
+    display: none;
+    max-width: 355px;
+    margin-left: 50px;
+    margin-top: .3rem;
+}
+#myName a{
+/*
+    width: 355px;
+    margin-left: 50px;
+*/
+}
+
+.navLinks{
+    display: none;
+    flex-flow: row;
+    width: 40rem;
+    height: 60px;
+}
+.navLinks > div{
+    border-left: 4px solid white;
+    width: 9.75rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+.navLinks > ul > a{
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+    
+    
+    border-left: 4px solid white;
+    width: 9.75rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.littleMenu{
+    width: 78px;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 768px){
+    #hamburger{ display: none; }
+    #myNameInitials{ display: block; }
+    .navLinks{ display: flex; }
+}
+
+@media screen and (min-width: 1024px){
+    #myNameInitials{ display: none;}
+    #myName{ display: block;}
+    .littleMenu{ display: none;}
+    
+    .navLinks > div{
+        width: 12.063rem;
+    }
+}
+
+
+
+/*________________________________
+ |                                |
+ |            HOME PAGE           |    
+ |________________________________|*/
+
+.homeContent{
+    margin: 0 auto;
+    width: 95%;
+}
+.logo{
+    width: 92.8vw;
+    margin-top: 5.3vw;
+}
+.homeDrawing{
+    width: 50vw;
+    margin: 0 auto;
+}
+#tagline{
+    width: 100%;
+}
+#homeDescP, #homeScroll{
+    width: 89.4vw;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+#homeScroll{
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px){
+    .homeContent{
+        width: 671px;
+    }
+    .logo{
+        width: 100%;
+        margin-top: 46px;
+    }
+    .homeOthers{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        margin-top: 4rem;
+    }
+    .homeDrawing{
+        width: 229px;
+    }
+    .homeDesc{
+        margin-left: 2.625rem;
+        width: 406px;
+    }
+    #homeDescP, homeScroll{
+        width: 24.688rem;
+    }
+    #homeDescP{
+        margin-top: 1.625rem;
+    }
+    #homeScroll{ margin-top: 21px;}
+}
+
+@media screen and (min-width: 1280px){
+    .homeContent{
+        width: 1024px;
+    }
+    .logo{
+        float: right;
+        width: 42rem;
+        margin-top: 4.5rem;
+    }
+    .homeOthers{
+        margin-top: 2.625rem;
+    }
+    .homeDrawing{
+        position: absolute;
+        margin-top: -6.563rem;
+    }
+    .homeDesc{
+        margin-left: 8.125rem;
+    }
+    #homeDescP{
+        margin-top: .75rem;
+    }
+    #homeDescP, #homeScroll{
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        width: 39.75rem;
+    }
+    #homeScroll{ margin-top: 1.5rem; }
+}
+
+
+
+/*________________________________
+ |                                |
+ |          STYLES PAGE           |    
+ |________________________________|*/
+.textAndPic{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+.textAndPic p{
+    width: 41.8%;
+}
+.textAndPic figure{
+    width: 57.1%;
+}
+main{
+    max-width: 818px;
+    margin: 0 auto;
+}
+main > *{
+    max-width: 818px;
+}
+
+

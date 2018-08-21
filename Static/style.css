@@ -9,7 +9,7 @@ Version: 0.0.1
 
 *{ box-sizing: border-box; }
 img{ max-width: 100%; }
-body{ background-color: white;}
+body{ background-color: white; margin: 0;}
 
 /*________________________________
  |                                |
@@ -23,33 +23,38 @@ h1{
 }
 h2{
     font-family: 'Fjalla One', sans-serif;
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: #44BFAB;
     font-weight: bold;
+    margin-bottom: .5rem;
 }
 h3{
     font-family: 'Fjalla One', sans-serif;
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: #C45194;
     font-weight: bold;
+    margin-bottom: .5rem;
 }
 h4{
     font-family: 'Fjalla One', sans-serif;
-    font-size: 2.25rem;
+    font-size: 2rem;
     color: #C45194;
     font-weight: bold;
+    margin-bottom: .3rem;
 }
 h5{
     font-family: 'Muli', sans-serif;
     font-size: 1.875rem;
     color: #1C1132;
     font-weight: bold;
+    margin-bottom: .3rem;
 }
 h6{
     font-family: 'Muli', sans-serif;
     font-size: 1.5rem;
     color: #1c1132;
     font-weight: bold;
+    margin-bottom: .35rem;
 }
 p{
     font-family: 'Muli', sans-serif;
@@ -63,6 +68,7 @@ a{
     font-size: 1.25rem;
     color: #3FB3A0;
     font-weight: bold;
+    text-decoration: none;
 }
 
 
@@ -95,6 +101,11 @@ ol li::before {
     direction: rtl;
 }
 ol li {counter-increment: li; }
+
+li{
+    font-family: 'muli', sans-serif;
+    font-size: 1.25rem;
+}
 /*List styling learned from: https://www.w3.org/Style/Examples/007/color-bullets.en.html*/
 
 
@@ -102,7 +113,7 @@ ol li {counter-increment: li; }
 
 /*________________________________
  |                                |
- |  PHOTO, TABLE, BUTTON, QUOTE   |    
+ |  PHOTO, TABLE, BUTTON, QUOTE   |   
  |________________________________|*/
 img{
     display: inline-block;
@@ -118,6 +129,8 @@ figcaption{
     text-align: right;
     margin: 0;
     width: 100%;
+    font-family: 'Muli', sans-serif;
+    font-style: italic;
 }
 
 
@@ -126,6 +139,7 @@ table {
     font-family: 'Muli', sans-serif;
     border-collapse: collapse;
     width: 100%;
+    margin: 1.5rem auto;
 }
 td, th {
     border: 1px solid #979797;
@@ -153,7 +167,8 @@ button{
     padding: 8px;
     
     color: white;
-    text-shadow: 1px 0 1px 0 black;
+/*    text-shadow: 1px 0 1px 0 black;*/
+    text-shadow: 1px 1px black;
     margin: 0;
     text-align: center;
 }
@@ -170,14 +185,19 @@ blockquote{
     margin: 0 auto;
     width: 488px;
     background: url(media/quote.png) no-repeat; 
+    min-height: 174px;
+    padding: 2rem;
+    font-family: 'Muli', sans-serif;
+    font-size: 1.125rem;
 }
 
 
 
 /*________________________________
  |                                |
- |            NAVIGATION          |    
+ |            NAVIGATION          |   
  |________________________________|*/
+header{ margin: 0 0 1rem 0; }
 nav{ margin: 0; width: 100%;}
 .navContents{
     background-color: #85CFC3;
@@ -227,13 +247,14 @@ nav{ margin: 0; width: 100%;}
 
 .littleMenu{
     width: 78px;
-    margin-right: 1rem;
+    margin: .5rem 0 0 1rem;
 }
 
 @media screen and (min-width: 768px){
     #hamburger{ display: none; }
     #myNameInitials{ display: block; }
     .navLinks{ display: flex; }
+    header{ margin: 0 0 4rem 0; }
 }
 
 @media screen and (min-width: 1024px){
@@ -250,10 +271,10 @@ nav{ margin: 0; width: 100%;}
 
 /*________________________________
  |                                |
- |            HOME PAGE           |    
+ |            HOME PAGE           |   
  |________________________________|*/
 
-.homeContent{
+#homeContent{
     margin: 0 auto;
     width: 95%;
 }
@@ -263,7 +284,9 @@ nav{ margin: 0; width: 100%;}
 }
 .homeDrawing{
     width: 50vw;
+    height: auto;
     margin: 0 auto;
+/*    margin-top: -3rem;*/
 }
 #tagline{
     width: 100%;
@@ -279,9 +302,7 @@ nav{ margin: 0; width: 100%;}
 }
 
 @media screen and (min-width: 768px){
-    .homeContent{
-        width: 671px;
-    }
+    #homeContent{ width: 671px; }
     .logo{
         width: 100%;
         margin-top: 46px;
@@ -292,57 +313,51 @@ nav{ margin: 0; width: 100%;}
         justify-content: space-between;
         margin-top: 4rem;
     }
-    .homeDrawing{
-        width: 229px;
-    }
+    .homeDrawing{ width: 229px; }
     .homeDesc{
         margin-left: 2.625rem;
         width: 406px;
     }
-    #homeDescP, homeScroll{
-        width: 24.688rem;
-    }
-    #homeDescP{
-        margin-top: 1.625rem;
-    }
+    #homeDescP, homeScroll{ width: 24.688rem; }
+    #homeDescP{ margin-top: 1.625rem; }
     #homeScroll{ margin-top: 21px;}
 }
 
 @media screen and (min-width: 1280px){
-    .homeContent{
+    #homeContent{
         width: 1024px;
+        max-width: 1024px;
     }
     .logo{
-        float: right;
+        margin-left: 22rem;
         width: 42rem;
         margin-top: 4.5rem;
     }
-    .homeOthers{
-        margin-top: 2.625rem;
-    }
     .homeDrawing{
-        position: absolute;
-        margin-top: -6.563rem;
+        width: 17.875rem;
+        margin: 0;
+        margin-top: -6.5rem;
     }
-    .homeDesc{
-        margin-left: 8.125rem;
+    .homeOthers{ margin-top: 2.625rem; }
+    #tagline{ width: 614px; }
+    .homeDesc{ 
+        margin-top: 0;
+        width: 38.5rem;
     }
-    #homeDescP{
-        margin-top: .75rem;
-    }
+    #homeDescP{ margin-top: .75rem; }
     #homeDescP, #homeScroll{
         font-size: 1.5rem;
         line-height: 1.875rem;
         width: 39.75rem;
     }
     #homeScroll{ margin-top: 1.5rem; }
-}
+} 
 
 
 
 /*________________________________
  |                                |
- |          STYLES PAGE           |    
+ |          STYLES PAGE           |   
  |________________________________|*/
 .textAndPic{
     display: flex;
@@ -350,11 +365,286 @@ nav{ margin: 0; width: 100%;}
     justify-content: space-between;
 }
 .textAndPic p{
-    width: 41.8%;
+    width: 40%;
+    margin-top: 0;
 }
 .textAndPic figure{
-    width: 57.1%;
+    width: 56%;
 }
+main{
+    max-width: 818px;
+    margin: 0 auto;
+}
+.textAndPic figure{
+    margin: 0;
+}
+#buttonSample{
+    width: 14rem;
+    height: 3.75rem;
+    margin: 1rem auto;
+    font-size: 3rem;
+    padding-top: 1px;
+}
+
+
+
+/*________________________________
+ |                                |
+ |             SIDEBAR            |   
+ |________________________________|*/
+#sidebarPage{ display: flex;}
+#mainWSide{ width: 38.75rem; }
+aside{ width: 13.625rem; margin-right: 2rem;}
+
+aside h4{ text-decoration: underline; }
+#sideP{ color: #3BA493; }
+.youremail{ background-color: #F5ABCA; }
+input[type=text]{
+    border: 1px solid #ccc;
+}
+input[type=submit]{
+    background-color: #C5DD7D;
+}
+.tags{
+    display: flex;
+    flex-flow: row wrap;
+}
+.tag{
+    min-width: 3.75rem;
+    max-width: 6.25rem;
+    background-color: #3BA493;
+    margin: .5rem .25rem;
+    height: 2rem;
+    border-radius: .5rem
+}
+.tag p{
+    text-align: center;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    margin: .2rem;
+}
+.mailbox{
+    border-radius: .5rem;
+    height: 93px;
+    width: 208px;
+    border: 1px solid #ccc;
+}
+.youremail p{ margin: 0 0 0 .2rem; }
+#emailMessage{
+    width: 100%;
+    height: 50px;
+}
+
+/*________________________________
+ |                                |
+ |             404 PAGE           |   
+ |________________________________|*/
+#404content{
+    width: 92vw;
+    max-width: 622px;
+}
+.drats{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.drats img{
+    width: 100%;
+}
+.phin404{
+    width: 80vw;
+    max-width: 246px;
+    margin: 0 auto;
+}
+.phin404{ margin: 0 auto;}
+#p404{
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+
+/*________________________________
+ |                                |
+ |         Search Results         |   
+ |________________________________|*/
+
+.resultsFor{
+    width: 35rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.resultsFor h3{
+    font-size: 2.5rem;
+    margin-bottom: 2.813rem;
+}
+.searchResult{
+    width: 35rem;
+    margin: 2.25rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+.resultImage{
+    border-radius: 100%;
+    width: 5.688rem;
+    height: 5.688rem;
+}
+.resultTitle{
+    margin-left: 2.25rem;
+    margin-top: 1rem;
+    grid-area: title;
+}
+.resultDesc{
+    display: none;
+    grid-area: desc;
+}
+
+
+#resultHighlight {
+    background-color: #C5DD7D;
+    border-radius: .5rem;
+    width:45.875rem;
+    height: 11.375rem;
+    
+    display: grid;
+    grid-template-columns: 24.5% 75%;
+    grid-template-rows: 3.25rem 7.8rem;
+    grid-template-areas:
+    'photo title'
+    'photo desc';
+}
+
+#resultHighlight img{
+    border-radius: .5rem;
+    margin: 0;
+    width: 11.25rem;
+    height: 11.25rem;
+    grid-area: photo;
+}
+#resultHighlight h5{
+    width: 32rem;  
+}
+#resultHighlight .resultDesc{
+    display: block;
+    background-color: #EEF5D8;
+}
+.resultDesc p{
+    margin: 1rem;
+}
+
+
+
+
+/*________________________________
+ |                                |
+ |         Search Results         |   
+ |________________________________|*/
+#postPage{
+    width: 659px;
+}
+.postPic{
+    width: 27rem;
+    display: block;
+    float: left;
+    margin: 1rem;
+}
+#viewMore{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.5rem;
+    color: #F5ABCA;
+    margin-top: 4rem;
+}
+
+
+
+/*________________________________
+ |                                |
+ |             Archive            |   
+ |________________________________|*/
+#archive{
+    max-width: 50rem;
+}
+.allProj h3{
+    text-align: center;
+    margin: 2rem auto;
+}
+.archThumbs{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+}
+.archThumbs img{
+    border-radius: 100%;
+    width: 14.063rem;
+    height: 14.063rem;
+    margin: 14px 20px;
+}
+
+
+
+
+/*________________________________
+ |                                |
+ |            Specifics           |   
+ |________________________________|*/
+.postPic{
+    width: 50%;
+    display: block;
+    float: left;
+    margin: 1rem;
+}
+.jerkPhotos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.jerkPhotos img{
+    width: 7rem;
+    height: 12.277rem;
+    margin: .5rem;
+}
+.colaPhoto{
+    width: 94%;
+}
+.otterPics{
+    display: flex;
+    justify-content: space-around;
+}
+.op{
+    width: 20rem;
+    height: 15rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
