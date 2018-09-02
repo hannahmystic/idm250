@@ -573,12 +573,34 @@ input[type=submit]{
     display: flex;
     flex-flow: row wrap;
     margin: 0 auto;
+    justify-content: center;
 }
 .archThumbs img{
     border-radius: 100%;
     width: 14.063rem;
     height: 14.063rem;
     margin: 14px 20px;
+}
+
+.circle{
+    border-radius: 100%;
+}
+.titleOverlay{
+    display: none;
+    position: absolute;
+    margin-top: -15.25rem;
+    margin-left: 1.25rem;
+    width: 14.063rem;
+    height: 14.063rem;
+    border-radius: 100%;
+    padding: .5rem;
+    text-align: center;
+    
+    transition: .5s ease;
+    background-color: rgba(255,255,255,.8);
+}
+.circle:hover .titleOverlay{
+    display: block;
 }
 
 

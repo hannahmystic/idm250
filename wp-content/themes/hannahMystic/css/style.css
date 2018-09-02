@@ -9,7 +9,12 @@ Version: 0.0.1
 
 *{ box-sizing: border-box; }
 img{ max-width: 100%; }
-body{ background-color: white;}
+body{
+    background-color: white;
+    margin: 0; }
+html{ margin-top: 0; }
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Fredoka+One|Muli');
 
 /*________________________________
  |                                |
@@ -167,9 +172,13 @@ button h3{
 */
 
 blockquote{
-    margin: 0 auto;
+    margin: 2rem auto;
     width: 488px;
-    background: url(media/quote.png) no-repeat; 
+    /* background: url(media/quote.png) no-repeat;  */
+    background-color: #C5DD7D;
+    border: 2px solid #C45194;
+    border-radius: 1rem;
+    padding: 6px 1rem;
 }
 
 
@@ -209,13 +218,20 @@ nav{ margin: 0; width: 100%;}
     width: 40rem;
     height: 60px;
 }
-.navLinks > div{
+
+#menu-hannav{
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+}
+.navLinks > ul > li{
     border-left: 4px solid white;
     width: 9.75rem;
     padding-top: 1rem;
     text-align: center;
+    float: right;
 }
-.navLinks > ul > a{
+.navLinks > ul > li > a{
     text-align: center;
     font-family: 'Muli', sans-serif;
     font-weight: bold;
@@ -225,10 +241,12 @@ nav{ margin: 0; width: 100%;}
     margin: 0 auto;
     
     
+/*
     border-left: 4px solid white;
     width: 9.75rem;
     padding-top: 1rem;
     text-align: center;
+*/
 }
 
 .littleMenu{
@@ -369,4 +387,306 @@ main > *{
     max-width: 818px;
 }
 
+
+
+
+/*________________________________
+ |                                |
+ |             SIDEBAR            |   
+ |________________________________|*/
+#sidebarPage{ display: flex;}
+#mainWSide{ width: 38.75rem; }
+aside{ width: 13.625rem; margin-right: 2rem;}
+
+aside h4{ text-decoration: underline; }
+#sideP{ color: #3BA493; }
+.youremail{ background-color: #F5ABCA; }
+input[type=text]{
+    border: 1px solid #ccc;
+}
+
+#searchsubmit{
+    background-color: #C5DD7D;
+    border-radius: 16px;
+    padding: 5px 10px;
+}
+#wpforms-submit-132{
+    background-color: #C5DD7D;
+    border-radius: 16px;
+    margin-bottom: 0;
+}
+.tags{
+    display: flex;
+    flex-flow: row wrap;
+}
+.tag{
+    min-width: 3.75rem;
+    max-width: 6.25rem;
+    background-color: #3BA493;
+    margin: .5rem .25rem;
+    height: 2rem;
+    border-radius: .5rem
+}
+.tag p{
+    text-align: center;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    margin: .2rem;
+}
+.mailbox{
+    border-radius: .5rem;
+    height: 93px;
+    width: 208px;
+    border: 1px solid #ccc;
+}
+.youremail p{ margin: 0 0 0 .2rem; }
+.emailMessage{
+    width: 100%;
+    height: 50px;
+}
+label{
+    font-family: 'Muli', sans-serif;
+    color: #1C1132;
+}
+
+#wpforms-widget-2, #search-4{
+    background-color: rgba(245, 171, 202, .2);
+    border-radius: 1rem;
+    padding: .5rem;
+}
+#wpforms-widget-2 .widgettitle, #search-4 .widgettitle{
+    margin: .2rem auto;
+}
+
+#sidebar > li{
+    list-style: none;
+    margin-top: 3rem;
+}
+.widgettitle{
+    font-size: 1.5rem;
+    color: #C45194;
+    
+}
+.attachment-75x75{
+    border-radius: 50%;
+}
+#rpwwt-recent-posts-widget-with-thumbnails-2 a{
+    text-decoration: none;
+    margin-top: 6px;
+}
+#archives-3 a{
+    text-decoration: none;
+}
+
+#wpforms-132{
+    margin-bottom: .5rem;
+}
+input{
+    border-radius: 1rem;
+}
+div.wpforms-container-full .wpforms-form input[type=text]{
+    border-radius: 1rem;
+}
+
+/*________________________________
+ |                                |
+ |             404 PAGE           |   
+ |________________________________|*/
+#404content{
+    width: 92vw;
+    max-width: 622px;
+}
+.drats{
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.drats img{
+    width: 100%;
+}
+.phin404{
+    width: 80vw;
+    max-width: 246px;
+    margin: 0 auto;
+}
+.phin404{ margin: 0 auto;}
+#p404{
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+
+/*________________________________
+ |                                |
+ |         Search Results         |   
+ |________________________________|*/
+
+.resultsFor{
+    width: 35rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.resultsFor h3{
+    font-size: 2.5rem;
+    margin-bottom: 2.813rem;
+}
+.searchResult{
+    width: 35rem;
+    margin: 2.25rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+.resultImage{
+    border-radius: 100%;
+    width: 5.688rem;
+    height: 5.688rem;
+}
+.resultTitle{
+    margin-left: 2.25rem;
+    margin-top: 1rem;
+    grid-area: title;
+}
+.resultDesc{
+    display: none;
+    grid-area: desc;
+}
+
+
+#resultHighlight {
+    background-color: #C5DD7D;
+    border-radius: .5rem;
+    width:45.875rem;
+    height: 11.375rem;
+    
+    display: grid;
+    grid-template-columns: 24.5% 75%;
+    grid-template-rows: 3.25rem 7.8rem;
+    grid-template-areas:
+    'photo title'
+    'photo desc';
+}
+
+#resultHighlight img{
+    border-radius: .5rem;
+    margin: 0;
+    width: 11.25rem;
+    height: 11.25rem;
+    grid-area: photo;
+}
+#resultHighlight h5{
+    width: 32rem;  
+}
+#resultHighlight .resultDesc{
+    display: block;
+    background-color: #EEF5D8;
+}
+.resultDesc p{
+    margin: 1rem;
+}
+
+
+
+
+/*________________________________
+ |                                |
+ |         Search Results         |   
+ |________________________________|*/
+#postPage{
+    width: 659px;
+}
+.postPic{
+    width: 27rem;
+    display: block;
+    float: left;
+    margin: 1rem;
+}
+#viewMore{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.5rem;
+    color: #F5ABCA;
+    margin-top: 4rem;
+}
+
+
+
+/*________________________________
+ |                                |
+ |             Archive            |   
+ |________________________________|*/
+ #archive{
+    max-width: 50rem;
+}
+.allProj h3{
+    text-align: center;
+    margin: 2rem auto;
+}
+.archThumbs{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+.archThumbs img{
+    border-radius: 100%;
+    width: 14.063rem;
+    height: 14.063rem;
+    margin: 14px 20px;
+}
+
+.circle{
+    border-radius: 100%;
+}
+.titleOverlay{
+    display: none;
+    position: absolute;
+    margin-top: -15.25rem;
+    margin-left: 1.25rem;
+    width: 14.063rem;
+    height: 14.063rem;
+    border-radius: 100%;
+    padding: .5rem;
+    text-align: center;
+    
+    transition: .5s ease;
+    background-color: rgba(255,255,255,.8);
+}
+.circle:hover .titleOverlay{
+    display: block;
+}
+
+
+/*________________________________
+ |                                |
+ |            Specifics           |   
+ |________________________________|*/
+.postPic{
+    width: 50%;
+    display: block;
+    float: left;
+    margin: 1rem;
+}
+.jerkPhotos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.jerkPhotos img{
+    width: 7rem;
+    height: 12.277rem;
+    margin: .5rem;
+}
+.colaPhoto{
+    width: 94%;
+}
+.otterPics{
+    display: flex;
+    justify-content: space-around;
+}
+.op{
+    width: 20rem;
+    height: 15rem;
+}
 
