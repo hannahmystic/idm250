@@ -6,7 +6,7 @@ get_header(); ?>
 <main id="postPage">
 
 <div class="postTitle">
-    <h2><?php the_title(); ?></h2>
+    <h2><?php echo the_title(); ?></h2>
 </div>
 
 <?php if (have_posts()): ?>
@@ -23,9 +23,9 @@ get_header(); ?>
     <h5>Sorry, No Post Found</h5>
 <?php endif; ?>
 
-<div class="viewMoreClass">
-    <p id="viewMore">View more posts in "<?php get_the_category(); ?>"</p>
-</div>
+<!-- <div class="viewMoreClass">
+    <p id="viewMore">View more posts in "<?php //echo get_the_category()[0]->name; ?>"</p>
+</div> -->
 
 
 </main>

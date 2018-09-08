@@ -18,7 +18,7 @@ function load_theme_assets()
     wp_enqueue_style('FjallaOne', 'https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet');
        wp_enqueue_style('FredokaOne', 'https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet');
        wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');
-    wp_enqueue_script('script', get_template_directory_uri() . '/dist/js/script.js ');
+    //wp_enqueue_script('script', get_template_directory_uri() . '/js/main.js ');
 }
 add_action('wp_enqueue_scripts', 'load_theme_assets');
 

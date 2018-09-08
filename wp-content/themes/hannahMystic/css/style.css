@@ -12,7 +12,10 @@ img{ max-width: 100%; }
 body{
     background-color: white;
     margin: 0; }
-html{ margin-top: 0; }
+html{
+    margin-top: 0 !important;
+    font-size: 12px;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Fredoka+One|Muli');
 
@@ -198,7 +201,7 @@ nav{ margin: 0; width: 100%;}
     flex-flow: row;
     justify-content: space-between;
 }
-#myNameInitials{ display: none; }
+
 #myName{
     display: none;
     max-width: 355px;
@@ -213,25 +216,56 @@ nav{ margin: 0; width: 100%;}
 }
 
 .navLinks{
-    display: none;
     flex-flow: row;
-    width: 40rem;
+    width: 43rem;
     height: 60px;
 }
+
+#menu-menu-1{
+    margin-top: 0;
+    padding-left: 0;
+}
+
 
 #menu-hannav{
     list-style-type: none;
     margin: 0;
     display: flex;
+    padding-left: 0;
 }
 .navLinks > ul > li{
-    border-left: 4px solid white;
-    width: 9.75rem;
-    padding-top: 1rem;
+    
+    width: 18vw;
+    padding-top: 20px;
     text-align: center;
     float: right;
+    height: 60px;
+    padding-left: 0;
 }
 .navLinks > ul > li > a{
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    font-size: .8rem;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+#hamburgerButton{
+    border: 0;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+    box-shadow: none;
+}
+#dropDown{
+    display: none;
+    position: absolute;
+    background-color: #85CFC3;
+    width: 12rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#dropDown a{
     text-align: center;
     font-family: 'Muli', sans-serif;
     font-weight: bold;
@@ -239,25 +273,43 @@ nav{ margin: 0; width: 100%;}
     color: white;
     text-decoration: none;
     margin: 0 auto;
-    
-    
-/*
-    border-left: 4px solid white;
-    width: 9.75rem;
-    padding-top: 1rem;
-    text-align: center;
-*/
+    border-bottom: 2px solid white;
 }
+
 
 .littleMenu{
     width: 78px;
-    margin-right: 1rem;
+    margin: auto 1rem;
 }
 
+@media screen and (min-width: 400px){
+    .navLinks > ul > li > a{
+        font-size: 3vw;
+    }
+
+}
 @media screen and (min-width: 768px){
     #hamburger{ display: none; }
     #myNameInitials{ display: block; }
     .navLinks{ display: flex; }
+
+    .navLinks > ul > li{
+        border-left: 4px solid white;
+        width: 9.75rem;
+        padding-top: 1rem;
+        text-align: center;
+        float: right;
+        height: 60px;
+    }
+    .navLinks > ul > li > a{
+        text-align: center;
+        font-family: 'Muli', sans-serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (min-width: 1024px){
@@ -277,20 +329,24 @@ nav{ margin: 0; width: 100%;}
  |            HOME PAGE           |    
  |________________________________|*/
 
-.homeContent{
+#homeContent{
     margin: 0 auto;
     width: 95%;
+    min-height: 100vh;
 }
 .logo{
     width: 92.8vw;
     margin-top: 5.3vw;
+    margin-left: 2.7vw;
 }
 .homeDrawing{
     width: 50vw;
     margin: 0 auto;
 }
 #tagline{
-    width: 100%;
+    width: 94%;
+    margin: 1rem auto;
+    margin-left: 3%;
 }
 #homeDescP, #homeScroll{
     width: 89.4vw;
@@ -303,12 +359,14 @@ nav{ margin: 0; width: 100%;}
 }
 
 @media screen and (min-width: 768px){
-    .homeContent{
-        width: 671px;
+    #homeContent{
+        width: 88%;
+        margin: 0 auto;
     }
-    .logo{
-        width: 100%;
-        margin-top: 46px;
+    .logo img{
+        width: 87%;
+        margin: 46px auto 0 auto;
+        /* margin-top: 46px; */
     }
     .homeOthers{
         display: flex;
@@ -317,39 +375,60 @@ nav{ margin: 0; width: 100%;}
         margin-top: 4rem;
     }
     .homeDrawing{
-        width: 229px;
+        /* width: 229px; */
+        width: 29.8%;
     }
     .homeDesc{
         margin-left: 2.625rem;
-        width: 406px;
+        width: 51%;
     }
-    #homeDescP, homeScroll{
-        width: 24.688rem;
+    #homeDescP, #homeScroll{
+        width: 94%;
     }
     #homeDescP{
         margin-top: 1.625rem;
     }
-    #homeScroll{ margin-top: 21px;}
+    #homeScroll{
+        margin-top: 21px;
+    }
 }
 
 @media screen and (min-width: 1280px){
-    .homeContent{
-        width: 1024px;
+    #homeContent{
+        width: 80vw;
+        height: 45vw;
+        max-width: 1280px;
+        max-height: 720px;
+        
+        /* display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas:
+        "homeDrawing homeLogo"
+        "homeDrawing homeDesc"; */
     }
     .logo{
-        float: right;
-        width: 42rem;
+        width: 100%;
         margin-top: 4.5rem;
+        text-align: right;
+        /* grid-area: homeLogo; */
+    } 
+    .logo img{
+        width: 67%;
+        text-align: right;
     }
     .homeOthers{
-        margin-top: 2.625rem;
+        display: flex;
+        margin-top: 2rem;
     }
     .homeDrawing{
-        position: absolute;
-        margin-top: -6.563rem;
+       width: 33%;
+       margin-top: -8.5rem;
+        /* grid-area: homeDrawing; */
     }
     .homeDesc{
-        margin-left: 8.125rem;
+        margin-left: 0;
+        width: 60%;
     }
     #homeDescP{
         margin-top: .75rem;
@@ -359,7 +438,9 @@ nav{ margin: 0; width: 100%;}
         line-height: 1.875rem;
         width: 39.75rem;
     }
-    #homeScroll{ margin-top: 1.5rem; }
+    #homeScroll{
+        margin-top: 1.5rem;
+    }
 }
 
 
@@ -616,9 +697,8 @@ div.wpforms-container-full .wpforms-form input[type=text]{
  |                                |
  |             Archive            |   
  |________________________________|*/
- #archive{
-    max-width: 50rem;
-}
+
+
 .allProj h3{
     text-align: center;
     margin: 2rem auto;
@@ -631,8 +711,8 @@ div.wpforms-container-full .wpforms-form input[type=text]{
 }
 .archThumbs img{
     border-radius: 100%;
-    width: 14.063rem;
-    height: 14.063rem;
+    width: 30vw;
+    height: 30vw;
     margin: 14px 20px;
 }
 
@@ -642,12 +722,12 @@ div.wpforms-container-full .wpforms-form input[type=text]{
 .titleOverlay{
     display: none;
     position: absolute;
-    margin-top: -15.25rem;
-    margin-left: 1.25rem;
-    width: 14.063rem;
-    height: 14.063rem;
+    margin-top: -33.5vw;
+    margin-left: 1.3rem;
+    width: 32vw;
+    height: 32vw;
     border-radius: 100%;
-    padding: .5rem;
+    padding: 1rem;
     text-align: center;
     
     transition: .5s ease;
@@ -655,6 +735,22 @@ div.wpforms-container-full .wpforms-form input[type=text]{
 }
 .circle:hover .titleOverlay{
     display: block;
+}
+@media screen and (min-width: 768px){
+    .archThumbs img{
+        border-radius: 100%;
+        width: 14.063rem;
+        height: 14.063rem;
+        margin: 14px 20px;
+    }
+
+    .titleOverlay{
+        margin-top: -16rem;
+        width: 15rem;
+        height: 15rem;
+        margin-left: 1.3rem;
+        padding: 1rem;
+    }
 }
 
 
@@ -690,3 +786,13 @@ div.wpforms-container-full .wpforms-form input[type=text]{
     height: 15rem;
 }
 
+
+.postContent .alignleft{
+    float: left;
+    margin-right: 1rem;
+}
+
+.postContent .alignright{
+    float: right;
+    margin-left: 1rem;
+}
